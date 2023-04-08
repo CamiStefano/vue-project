@@ -4,7 +4,23 @@ const styleColor = "color: blue";
 const arrayColores = ["blue", "red", "peru"];
 const activo = false;
 
-const arrayFrutas = ["🍎", "🍌", "🍉", "🍓", "🍒"];
+const arrayFrutas = [
+  {
+    name: "Manzana 🍎",
+    price: "$1.00",
+    description: "Una manzana",
+  },
+  {
+    name: "Pera 🍐",
+    price: "$2.00",
+    description: "Una pera",
+  },
+  {
+    name: "Naranja 🍊",
+    price: "$3.00",
+    description: "Una naranja",
+  },
+];
 </script>
 
 <template>
@@ -24,7 +40,7 @@ const arrayFrutas = ["🍎", "🍌", "🍉", "🍓", "🍒"];
   <p>{{ arrayFrutas }}</p>
 
   <ul>
-    <li v-for="(fruta, index) in arrayFrutas" :key="index">{{ index }} {{ fruta }}</li>
+    <li v-for="(fruta, name) in arrayFrutas" :key="name">{{ fruta.name }} {{ fruta.price }} {{ fruta.description }}</li>
   </ul>
 </template>
 
