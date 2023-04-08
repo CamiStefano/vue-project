@@ -40,7 +40,7 @@ const arrayFrutas = [
   <p>{{ arrayFrutas }}</p>
 
   <ul>
-    <li v-for="(fruta, name) in arrayFrutas" :key="name">{{ fruta.name }} {{ fruta.price }} {{ fruta.description }}</li>
+    <li v-for="fruta in arrayFrutas" :key="fruta.name">{{ fruta.name }} - {{ fruta.price }} - {{ fruta.description }}</li>
   </ul>
 </template>
 
